@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display";
+  text-align: center;
+}
+
+.img-hero-left,
+.img-hero-right {
+  width: 50%;
+  margin-bottom: 51px;
+}
+
+.img-hero-left {
+  transform: translateX(-10%);
+}
+
+.img-hero-right {
+  transform: translateX(10%);
+}
+
+.img-hero-tablet {
+  display: none;
+}
+
+/* ==========
+ TYPOGRAPHY
+========== */
+h1,
+h2,
+h3 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 44px;
+  color: #28283d;
+  margin-bottom: 24px;
+}
+
+.gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    #28283d 0%,
+    #855fb1 25%,
+    #b18bdd 50%,
+    #4d96a9 75%,
+    #71c0d4 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 1000%;
+  background-position: -150%;
+  animation: animatedText 12s linear infinite;
+}
+
+@keyframes animatedText {
+  to {
+    background-position: 50%;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.h2-meetings {
+  color: #28283d;
+  margin-bottom: 32px;
+}
+
+.h2-footer {
+  color: #fafafa;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4d96a9;
+  margin-bottom: 24px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #87879d;
+}
+
+p.paragraph-hero,
+p.paragraph-footer {
+  margin-bottom: 32px;
+}
+
+p.paragraph-footer {
+  color: #fafafa;
+}
+
+/* ==========
+ LAYOUT
+========== */
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 48px 0 0 0;
+  margin-bottom: 51px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: 148px;
+}
+
+.hero-text {
+  width: 87.2%;
+}
+
+/* IMG GALLERY */
+.img-grid {
+  width: 87.2%;
+  margin: 0 auto 64px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 7.6%;
+  grid-row-gap: 7.3%;
+}
+
+.img-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* MEETINGS INFO */
+.meetings-info {
+  width: 87.2%;
+  margin: 0 auto 168px auto;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 0;
+  height: 428px;
+  max-height: 428px;
+  background-image: url("assets/mobile/image-footer.jpg");
+  background-size: cover;
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(77, 150, 169, 0.8);
+}
+
+.footer-text {
+  position: absolute;
+  top: 21.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87.2%;
+}
+
+/* ==========
+ BUTTONS
+========== */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: #4d96a9;
+  padding: 16px 40px;
+  margin-bottom: 16px;
+}
+
+.btn-primary span {
+  color: #8fe3f9;
+}
+
+.btn-primary:hover {
+  background: #71c0d4;
+}
+
+.btn-secondary {
+  background: #855fb1;
+  padding: 16px 29px;
+}
+
+.btn-footer {
+  background: #855fb1;
+  padding: 16px 40px;
+}
+
+.btn-footer span {
+  color: #d9b8ff;
+}
+
+.btn-secondary:hover,
+.btn-footer:hover {
+  background: #b18bdd;
+}
+/* DIVIDER */
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  color: #87879d;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  margin: 0px auto 64px auto;
+  position: relative;
+}
+
+.divider-2 {
+  margin-bottom: 0;
+}
+
+.divider::before {
+  position: absolute;
+  top: -84px;
+  content: "";
+  width: 1px;
+  height: 84px;
+  background-color: rgba(135, 135, 157, 0.25);
+}
+
+.divider-footer-container {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* ANIMATIONS */
+.fade-in-down {
+  animation: fade-in-down 2s ease 1;
+}
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================================
+     MEDIA QUERIES
+ ================================================================ */
+@media (min-width: 600px) {
+  .img-hero-left,
+  .img-hero-right {
+    display: none;
+  }
+
+  .img-hero-tablet {
+    display: block;
+    width: 100%;
+    margin-bottom: 68px;
+    /* overflow: hidden; */
+  }
+
+  /* ==========
+     TYPOGRAPHY
+    ========== */
+
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .h2-meetings {
+    width: 77.7%;
+    margin: 0 auto 32px auto;
+  }
+
+  .h2-footer {
+    color: #fafafa;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  p.paragraph-footer {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  /* ==========
+     LAYOUT
+    ========== */
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 48px 0 0 0;
+    margin-bottom: 64px;
+  }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 160px;
+  }
+
+  .hero-text {
+    width: 59.5%;
+  }
+
+  /* IMG GALLERY */
+  .img-grid {
+    display: flex;
+    width: 89.7%;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0 auto 48px auto;
+  }
+
+  .img-grid img {
+    width: 23.8%;
+  }
+
+  /* MEETINGS INFO */
+  .meetings-info {
+    width: 74.6%;
+    margin: 0 auto 180px auto;
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    padding: 0;
+    height: 428px;
+    max-height: 428px;
+    background-image: url("assets/tablet/image-footer.jpg");
+    background-size: cover;
+    position: relative;
+  }
+
+  .footer-text {
+    width: 74.6%;
+  }
+  /* ==========
+     BUTTONS
+    ========== */
+  .btn-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 348px;
+    margin: 0 auto;
+  }
+
+  .btn-primary {
+    margin-bottom: 0px;
+  }
+
+  .btn-footer {
+    background: #855fb1;
+    padding: 16px 40px;
+  }
+
+  /* DIVIDER */
+
+  .divider {
+    margin: 0px auto 67px auto;
+  }
+}
+
+/* ==============================
+ DESKTOP
+ ============================== */
+@media (min-width: 992px) {
+  .img-hero-tablet {
+    display: none;
+  }
+
+  .img-hero-left,
+  .img-hero-right {
+    display: block;
+    width: 25%;
+  }
+  .img-hero-left {
+    order: -1;
+  }
+
+  .img-hero-right {
+    order: 1;
+    padding-top: 40px;
+  }
+  /* ==========
+     TYPOGRAPHY
+    ========== */
+
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 34px;
+  }
+
+  .h2-meetings {
+    width: 77.7%;
+  }
+
+  .h2-footer {
+    width: 31.5%;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  p.paragraph-footer {
+    width: 31.5%;
+    margin: 0;
+  }
+
+  /* ==========
+     LAYOUT
+    ========== */
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 80px 0 0 0;
+    margin-bottom: 61px;
+  }
+
+  /* HERO */
+  .hero {
+    align-items: flex-start;
+    margin-bottom: 190px;
+  }
+
+  .hero-text {
+    padding-top: 40px;
+    width: 37.5%;
+    order: 0;
+    margin: 0 5.9%;
+  }
+
+  /* IMG GALLERY */
+  .img-grid {
+    width: 77.08%;
+    margin: 0 auto 80px auto;
+  }
+
+  .img-grid img {
+    width: 23%;
+  }
+
+  /* MEETINGS INFO */
+  .meetings-info {
+    width: 37.5%;
+    margin: 0 auto 180px auto;
+  }
+
+  /* FOOTER */
+  footer {
+    height: 308px;
+    max-height: 308px;
+    background-image: url("assets/desktop/image-footer.jpg");
+  }
+
+  .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 77.1%;
+    text-align: left;
+    top: 38%;
+  }
+  /* ==========
+     BUTTONS
+    ========== */
+  .btn-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 348px;
+    margin: 0 auto;
+  }
+
+  .btn-primary {
+    margin-bottom: 0px;
+  }
+
+  .btn-footer {
+    background: #855fb1;
+    padding: 16px 40px;
+  }
+
+  /* DIVIDER */
+
+  .divider {
+    margin: 0px auto 67px auto;
+  }
+}
